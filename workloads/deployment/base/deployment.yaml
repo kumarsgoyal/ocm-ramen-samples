@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: busybox
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       appname: busybox
@@ -15,26 +15,42 @@ spec:
     spec:
       containers:
         - name: logger
-          image: quay.io/nirsof/busybox:stable
+          image: docker.io/kumarsgoyal/cg-manager:latest
           imagePullPolicy: IfNotPresent
-          command:
-            - sh
-            - -c
-            - |
-              emit() {
-                  echo "$(date) $1" | tee -a /var/log/ramen.log
-                  sync
-              }
-              trap "emit STOP; exit" TERM
-              emit START
-              while true; do
-                  sleep 10 & wait
-                  emit UPDATE
-              done
+          command: ["/bin/sh", "-c", "/app/log-replica"]
+          env:
+            - name: LOG_FILE_PATH
+              value: "/app/data/log.yaml"
+            - name: COUNTER_FILE_PATH
+              value: "/app/data/counter-%d.yaml"
+            - name: TIME_INTERVAL
+              value: "100"
+            - name: TIMEOUT
+              value: "5000"
+            - name: PORT
+              value: ":8080"
+            - name: SERVICE_ADDR
+              value: "log-replica-%d.log-replica-service.default.svc.cluster.local:8080"
+            - name: HOSTNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: REPLICA_COUNT
+              value: "3"
           volumeMounts:
-            - name: varlog
-              mountPath: /var/log
+            - name: log-replica-volume1
+              mountPath: /app/data
+            - name: log-replica-volume2
+              mountPath: /app/data
+            - name: log-replica-volume3
+              mountPath: /app/data
       volumes:
-        - name: varlog
+        - name: log-replica-volume1
           persistentVolumeClaim:
-            claimName: busybox-pvc
+            claimName: busybox-cg1-pvc1
+        - name: log-replica-volume2
+          persistentVolumeClaim:
+            claimName: busybox-cg1-pvc2
+        - name: log-replica-volume3
+          persistentVolumeClaim:
+            claimName: busybox-cg1-pvc3
