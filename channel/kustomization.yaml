@@ -10,4 +10,4 @@ patches:
     patch: |-
       - op: replace
         path: /spec/pathname
-        value: https://github.com/BenamarMk/ocm-ramen-samples.git
+        value: https://github.com/kumarsgoyal/ocm-ramen-samples.git
