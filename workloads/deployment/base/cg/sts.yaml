@@ -45,7 +45,7 @@ spec:
         - name: PORT
           value: ":8080"
         - name: SERVICE_ADDR
-          value: "busybox-statefulset-%d.busybox-service.default.svc.cluster.local:8080"  # headless service name for replicas  
+          value: "busybox-%d.busybox-service.default.svc.cluster.local:8080"  # headless service name for replicas  
         - name: HOSTNAME
           valueFrom:
             fieldRef:
