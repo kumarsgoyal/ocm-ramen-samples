@@ -16,7 +16,7 @@ kind: StatefulSet
 metadata:
   name: busybox
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: busybox
@@ -45,13 +45,13 @@ spec:
         - name: PORT
           value: ":8080"
         - name: SERVICE_ADDR
-          value: "busybox-%d.busybox-service.default.svc.cluster.local:8080"  # headless service name for replicas  
+          value: "busybox-%d.busybox-service.deployment-cg-cephfs.svc.cluster.local:8080"  # headless service name for replicas  
         - name: HOSTNAME
           valueFrom:
             fieldRef:
               fieldPath: metadata.name
         - name: REPLICA_COUNT
-          value: "4"  
+          value: "3"  
         volumeMounts:
         - name: busybox-volume
           mountPath: /app/data
