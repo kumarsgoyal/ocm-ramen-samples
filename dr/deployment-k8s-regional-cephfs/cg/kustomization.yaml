@@ -18,8 +18,8 @@ patches:
         value: false
       - op: replace
         path: /spec/preferredCluster
-        value: dr1
-        # value: prsurve-dev1-c1
+        value: prsurve-dev1-c1
+        # value: dr1
       - op: replace
         path: /spec/drPolicyRef/name
         value: dr-policy
