@@ -7,8 +7,7 @@ spec:
   accessModes:
     - ReadWriteMany
   # Customize in your overlay.
-  storageClassName: ocs-storagecluster-cephfs 
-  # rook-cephfs-fs1
+  storageClassName: rook-cephfs-fs1
   resources:
     requests:
       storage: 1Gi
@@ -21,8 +20,7 @@ spec:
   accessModes:
     - ReadWriteMany
   # Customize in your overlay.
-  storageClassName: ocs-storagecluster-cephfs 
-  # rook-cephfs-fs1
+  storageClassName: rook-cephfs-fs1
   resources:
     requests:
       storage: 1Gi
@@ -35,8 +33,7 @@ spec:
   accessModes:
     - ReadWriteMany
   # Customize in your overlay.
-  storageClassName: ocs-storagecluster-cephfs 
-  # rook-cephfs-fs1
+  storageClassName: rook-cephfs-fs1
   resources:
     requests:
       storage: 1Gi
