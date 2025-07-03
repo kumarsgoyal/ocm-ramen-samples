@@ -15,7 +15,7 @@ patches:
         value: false
       - op: replace
         path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-submariner-enabled
-        value: true
+        value: false
       - op: replace
         path: /spec/preferredCluster
         value: prsurve-dev1-c1
