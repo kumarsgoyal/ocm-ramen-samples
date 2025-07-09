@@ -6,7 +6,7 @@ metadata:
 spec:
   preferredCluster: prsurve-c1-7j
   drPolicyRef:
-    name: drpolicy-5m
+    name: odr-policy-5m 
   placementRef:
     kind: Placement
     name: placement
