@@ -4,7 +4,7 @@ kind: DRPlacementControl
 metadata:
   name: drpc
 spec:
-  preferredCluster: prsurve-dev1-c1
+  preferredCluster: prsurve-c1-7j
   drPolicyRef:
     name: drpolicy-5m
   placementRef:
