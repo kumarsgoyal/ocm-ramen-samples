@@ -12,7 +12,7 @@ patches:
     patch: |-
       - op: replace
         path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-cg-enabled
-        value: true
+        value: false
       - op: replace
         path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-submariner-enabled
         value: true
