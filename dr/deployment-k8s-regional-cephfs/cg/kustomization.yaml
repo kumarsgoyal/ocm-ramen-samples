@@ -13,9 +13,9 @@ patches:
       # - op: replace
       #   path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-cg-enabled
       #   value: false
-      # - op: replace
-      #   path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-submariner-enabled
-      #   value: false
+      - op: replace
+        path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-submariner-enabled
+        value: false
       - op: replace
         path: /spec/preferredCluster
         value: dr1
