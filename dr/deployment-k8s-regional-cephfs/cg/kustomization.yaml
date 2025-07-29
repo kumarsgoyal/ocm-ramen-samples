@@ -9,13 +9,13 @@ patches:
   - target:
       kind: DRPlacementControl
       name: drpc
-    patch: |-
-      - op: replace
-        path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-cg-enabled
-        value: true
-      - op: replace
-        path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-submariner-enabled
-        value: false
+    # patch: |-
+    #   - op: replace
+    #     path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-cg-enabled
+    #     value: true
+      # - op: replace
+      #   path:  /metadata/annotations/drplacementcontrol.ramendr.openshift.io~1is-submariner-enabled
+      #   value: false
       - op: replace
         path: /spec/preferredCluster
         value: prsurve-c1-7j
