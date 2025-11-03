@@ -21,7 +21,7 @@ patches:
         value: dr1
       - op: replace
         path: /spec/drPolicyRef/name
-        value: dr-policy
+        value: dr-policy-5m
       - op: replace
         path: /metadata/name
         value: busybox-with-cg
