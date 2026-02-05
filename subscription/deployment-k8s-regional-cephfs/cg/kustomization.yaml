@@ -12,7 +12,7 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/annotations/apps.open-cluster-management.io~1github-path
-        value: workloads/deployment/odr-regional-cephfs/cg
+        value: workloads/deployment/base/cg
       - op: replace
         path: /metadata/annotations/apps.open-cluster-management.io~1github-branch
         value: cg-cephfs-minikube-local
