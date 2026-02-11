@@ -6,7 +6,6 @@ metadata:
     apps.open-cluster-management.io/github-branch: main
     # Customize in your overlay.
     apps.open-cluster-management.io/github-path: PATH
-    apps.open-cluster-management.io/reconcile-option: replace
   name: subscription
 spec:
   channel: ramen-samples/ramen-gitops
