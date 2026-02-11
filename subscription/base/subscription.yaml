@@ -13,4 +13,4 @@ spec:
     placementRef:
       kind: Placement
       name: placement
-  reconcile-option: replace
+  reconcileOption: replace
