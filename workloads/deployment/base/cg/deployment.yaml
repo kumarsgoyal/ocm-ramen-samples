@@ -34,10 +34,10 @@ spec:
           volumeMounts:
             - name: varlog
               mountPath: /var/log
-            # - name: varlog2
-            #   mountPath: /var/log2
-            # - name: varlog3
-            #   mountPath: /var/log3
+            - name: varlog2
+              mountPath: /var/log2
+            - name: varlog3
+              mountPath: /var/log3
       volumes:
         - name: varlog
           persistentVolumeClaim:
