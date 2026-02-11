@@ -44,7 +44,7 @@ spec:
             claimName: busybox-cg1-pvc1
         - name: varlog2
           persistentVolumeClaim:
-        #     claimName:  busybox-cg1-pvc2
+            claimName:  busybox-cg1-pvc2
         # - name: varlog3
         #   persistentVolumeClaim:
         #     claimName:  busybox-cg1-pvc33
