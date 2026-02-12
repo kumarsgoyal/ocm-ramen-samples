@@ -1,0 +1,50 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      appname: busybox
+  template:
+    metadata:
+      labels:
+        appname: busybox
+    spec:
+      containers:
+        - name: logger
+          image: quay.io/nirsof/busybox:stable
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+            - -c
+            - |
+              emit() {
+                  echo "$(date) $1" | tee -a /var/log/ramen.log /var/log2/ramen.logg
+                  sync
+              }
+              trap "emit STOP; exit" TERM
+              emit START
+              while true; do
+                  sleep 10 & wait
+                  emit UPDATE
+              done
+          volumeMounts:
+            - name: varlog
+              mountPath: /var/log
+            - name: varlog2
+              mountPath: /var/log2
+            - name: varlog3
+              mountPath: /var/log3
+      volumes:
+        - name: varlog
+          persistentVolumeClaim:
+            claimName: busybox-cg1-pvc1
+        - name: varlog2
+          persistentVolumeClaim:
+            claimName:  busybox-cg1-pvc2
+        - name: varlog3
+          persistentVolumeClaim:
+            claimName:  busybox-cg1-pvc33
