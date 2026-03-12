@@ -36,8 +36,8 @@ spec:
               mountPath: /var/log
             - name: varlog2
               mountPath: /var/log2
-            - name: varlog3
-              mountPath: /var/log3
+            # - name: varlog3
+            #   mountPath: /var/log3
             # - name: varlog4
             #   mountPath: /var/log4
             # - name: varlog5
@@ -49,9 +49,9 @@ spec:
         - name: varlog2
           persistentVolumeClaim:
             claimName:  busybox-cg1-pvc2
-        - name: varlog3
-          persistentVolumeClaim:
-            claimName:  busybox-cg1-pvc3
+        # - name: varlog3
+        #   persistentVolumeClaim:
+        #     claimName:  busybox-cg1-pvc3
         # - name: varlog4
         #   persistentVolumeClaim:
         #     claimName:  busybox-cg1-pvc4
