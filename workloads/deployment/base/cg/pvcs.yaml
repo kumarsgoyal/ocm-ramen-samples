@@ -11,32 +11,32 @@ spec:
   resources:
     requests:
       storage: 1Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: busybox-cg1-pvc2
-spec:
-  accessModes:
-    - ReadWriteMany
-  # Customize in your overlay.
-  storageClassName: rook-cephfs-fs1
-  resources:
-    requests:
-      storage: 1Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: busybox-cg1-pvc3
-spec:
-  accessModes:
-    - ReadWriteMany
-  # Customize in your overlay.
-  storageClassName: rook-cephfs-fs1
-  resources:
-    requests:
-      storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: busybox-cg1-pvc2
+# spec:
+#   accessModes:
+#     - ReadWriteMany
+#   # Customize in your overlay.
+#   storageClassName: rook-cephfs-fs1
+#   resources:
+#     requests:
+#       storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: busybox-cg1-pvc3
+# spec:
+#   accessModes:
+#     - ReadWriteMany
+#   # Customize in your overlay.
+#   storageClassName: rook-cephfs-fs1
+#   resources:
+#     requests:
+#       storage: 1Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
