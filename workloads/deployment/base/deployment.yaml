@@ -22,7 +22,7 @@ spec:
             - -c
             - |
               emit() {
-                  echo "$(date) $1" | tee -a /var/log/ramen.log
+                  echo "$(date) $1" | tee -a /var/log1/ramen.log
                   sync
               }
               trap "emit STOP; exit" TERM
@@ -32,9 +32,56 @@ spec:
                   emit UPDATE
               done
           volumeMounts:
-            - name: varlog
-              mountPath: /var/log
+            - name: vol1
+              mountPath: /var/log1
+            - name: vol2
+              mountPath: /var/log2
+            - name: vol3
+              mountPath: /var/log3
+            - name: vol4
+              mountPath: /var/log4
+            - name: vol5
+              mountPath: /var/log5
+            - name: vol6
+              mountPath: /var/log6
+            - name: vol7
+              mountPath: /var/log7
+            - name: vol8
+              mountPath: /var/log8
+            - name: vol9
+              mountPath: /var/log9
+            - name: vol10
+              mountPath: /var/log10
+
       volumes:
-        - name: varlog
+        - name: vol1
           persistentVolumeClaim:
-            claimName: busybox-pvc
+            claimName: busybox-pvc-1
+        - name: vol2
+          persistentVolumeClaim:
+            claimName: busybox-pvc-2
+        - name: vol3
+          persistentVolumeClaim:
+            claimName: busybox-pvc-3
+        - name: vol4
+          persistentVolumeClaim:
+            claimName: busybox-pvc-4
+        - name: vol5
+          persistentVolumeClaim:
+            claimName: busybox-pvc-5
+        - name: vol6
+          persistentVolumeClaim:
+            claimName: busybox-pvc-6
+        - name: vol7
+          persistentVolumeClaim:
+            claimName: busybox-pvc-7
+        - name: vol8
+          persistentVolumeClaim:
+            claimName: busybox-pvc-8
+        - name: vol9
+          persistentVolumeClaim:
+            claimName: busybox-pvc-9
+        - name: vol10
+          persistentVolumeClaim:
+            claimName: busybox-pvc-10
+
