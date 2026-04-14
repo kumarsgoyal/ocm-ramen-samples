@@ -52,6 +52,10 @@ spec:
               mountPath: /var/log9
             - name: vol10
               mountPath: /var/log10
+            - name: vol11
+              mountPath: /var/log11
+            - name: vol12
+              mountPath: /var/log12
 
       volumes:
         - name: vol1
@@ -84,4 +88,10 @@ spec:
         - name: vol10
           persistentVolumeClaim:
             claimName: busybox-pvc-10
+        - name: vol11
+          persistentVolumeClaim:
+            claimName: new-pvc-1
+        - name: vol12
+          persistentVolumeClaim:
+            claimName: new-pvc-2
 
