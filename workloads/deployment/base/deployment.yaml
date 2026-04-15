@@ -42,21 +42,20 @@ spec:
               mountPath: /var/log4
             - name: vol5
               mountPath: /var/log5
-            # - name: vol6
-            #   mountPath: /var/log6
-            # - name: vol7
-            #   mountPath: /var/log7
-            # - name: vol8
-            #   mountPath: /var/log8
-            # - name: vol9
-            #   mountPath: /var/log9
-            # - name: vol10
-            #   mountPath: /var/log10
-            - name: vol11
-              mountPath: /var/log11
-            - name: vol12
-              mountPath: /var/log12
-
+            - name: vol6
+              mountPath: /var/log6
+            - name: vol7
+              mountPath: /var/log7
+            - name: vol8
+              mountPath: /var/log8
+            - name: vol9
+              mountPath: /var/log9
+            - name: vol10
+              mountPath: /var/log10
+            # - name: vol11
+            #   mountPath: /var/log11
+            # - name: vol12
+            #   mountPath: /var/log12
       volumes:
         - name: vol1
           persistentVolumeClaim:
@@ -73,25 +72,25 @@ spec:
         - name: vol5
           persistentVolumeClaim:
             claimName: busybox-pvc-5
-        # - name: vol6
-        #   persistentVolumeClaim:
-        #     claimName: busybox-pvc-6
-        # - name: vol7
-        #   persistentVolumeClaim:
-        #     claimName: busybox-pvc-7
-        # - name: vol8
-        #   persistentVolumeClaim:
-        #     claimName: busybox-pvc-8
-        # - name: vol9
-        #   persistentVolumeClaim:
-        #     claimName: busybox-pvc-9
-        # - name: vol10
-        #   persistentVolumeClaim:
-        #     claimName: busybox-pvc-10
-        - name: vol11
+        - name: vol6
           persistentVolumeClaim:
-            claimName: new-pvc-1
-        - name: vol12
+            claimName: busybox-pvc-6
+        - name: vol7
           persistentVolumeClaim:
-            claimName: new-pvc-2
+            claimName: busybox-pvc-7
+        - name: vol8
+          persistentVolumeClaim:
+            claimName: busybox-pvc-8
+        - name: vol9
+          persistentVolumeClaim:
+            claimName: busybox-pvc-9
+        - name: vol10
+          persistentVolumeClaim:
+            claimName: busybox-pvc-10
+        # - name: vol11
+        #   persistentVolumeClaim:
+        #     claimName: new-pvc-1
+        # - name: vol12
+        #   persistentVolumeClaim:
+        #     claimName: new-pvc-2
 
