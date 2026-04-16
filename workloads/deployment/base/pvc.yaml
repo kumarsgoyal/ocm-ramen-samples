@@ -58,66 +58,66 @@ spec:
   resources:
     requests:
       storage: 1Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: busybox-pvc-6
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: STORAGE_CLASS_NAME
-  resources:
-    requests:
-      storage: 1Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: busybox-pvc-7
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: STORAGE_CLASS_NAME
-  resources:
-    requests:
-      storage: 1Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: busybox-pvc-8
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: STORAGE_CLASS_NAME
-  resources:
-    requests:
-      storage: 1Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: busybox-pvc-9
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: STORAGE_CLASS_NAME
-  resources:
-    requests:
-      storage: 1Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: busybox-pvc-10
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: STORAGE_CLASS_NAME
-  resources:
-    requests:
-      storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: busybox-pvc-6
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: STORAGE_CLASS_NAME
+#   resources:
+#     requests:
+#       storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: busybox-pvc-7
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: STORAGE_CLASS_NAME
+#   resources:
+#     requests:
+#       storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: busybox-pvc-8
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: STORAGE_CLASS_NAME
+#   resources:
+#     requests:
+#       storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: busybox-pvc-9
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: STORAGE_CLASS_NAME
+#   resources:
+#     requests:
+#       storage: 1Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: busybox-pvc-10
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: STORAGE_CLASS_NAME
+#   resources:
+#     requests:
+#       storage: 1Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
