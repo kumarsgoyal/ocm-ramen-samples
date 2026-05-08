@@ -5,9 +5,9 @@ metadata:
   name: busybox-cg1-pvc1
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce # ReadWriteMany
   # Customize in your overlay.
-  storageClassName: rook-cephfs-fs1
+  storageClassName: standard # rook-cephfs-fs1
   resources:
     requests:
       storage: 1Gi
@@ -44,15 +44,15 @@ metadata:
   name: busybox-cg1-pvc4
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce # ReadWriteMany
   # Customize in your overlay.
-  storageClassName: rook-cephfs-fs1
+  storageClassName: standard # rook-cephfs-fs1
   resources:
     requests:
       storage: 1Gi
 # ---
 # apiVersion: v1
-# kind: PersistentVolumeClaim
+# kind: PersistentVolumeClaimReadWriteMany
 # metadata:
 #   name: busybox-cg1-pvc5
 # spec:
