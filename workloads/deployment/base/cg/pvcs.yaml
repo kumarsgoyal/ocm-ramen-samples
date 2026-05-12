@@ -7,7 +7,7 @@ spec:
   accessModes:
     - ReadWriteOnce # ReadWriteMany
   # Customize in your overlay.
-  storageClassName: standard # rook-cephfs-fs1
+  storageClassName: mock-offloaded-storage # rook-cephfs-fs1
   resources:
     requests:
       storage: 1Gi
@@ -46,7 +46,7 @@ spec:
   accessModes:
     - ReadWriteOnce # ReadWriteMany
   # Customize in your overlay.
-  storageClassName: standard # rook-cephfs-fs1
+  storageClassName: mock-offloaded-storage # rook-cephfs-fs1
   resources:
     requests:
       storage: 1Gi
